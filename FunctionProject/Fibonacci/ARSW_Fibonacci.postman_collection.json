@@ -1,41 +1,34 @@
 {
 	"info": {
 		"_postman_id": "329a103a-2a0a-4e74-9f38-383aa0e9e960",
-		"name": "ARSW_Fibonacci",
+		"name": "ARSW_SCALABILITY_LAB_II_AZURE",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "fibonacci",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "13ffad74-6e59-4466-b953-7bcefd94f838",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body" : {
+					"mode": "raw",
+					"raw" : {"nth": 1000}
+				},
 				"url": {
-					"raw": "https://functionprojectfibonaccijm.azurewebsites.net/fibonacci/{{nth}}",
+					"raw": "https://functionprojectfibonaccijm.azurewebsites.net/api/fibonacci",
 					"protocol": "https",
 					"host": [
-						"functionprojectfibonaccijm.azurewebsites.net"
+						"functionprojectfibonaccijm",
+						"azurewebsites",
+						"net"
 					],
 					"path": [
-						"fibonacci",
-						"{{nth}}"
+						"api",
+						"fibonacci"
 					]
 				}
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
